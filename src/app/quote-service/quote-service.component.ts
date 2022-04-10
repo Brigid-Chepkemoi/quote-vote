@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { quotes } from '../quoteList';
-import { Quotes } from '../quotes';
+import { quotes } from '../quote-list';
+import { Quotes } from '../quote-class/quote-class.component';
 
 @Injectable({
   providedIn: 'root'
 })
-export class QuoteService {
+export class QuoteServiceComponent {
 getQuotes(){
 return quotes
 }

@@ -2,7 +2,7 @@ import { Quote } from '@angular/compiler';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { Quotes } from '../quotes';
+import { Quotes } from '../quote-class/quote-class.component';
 
 @Component({
   selector: 'app-quote-form',
@@ -10,8 +10,8 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quote-form.component.css']
 })
 export class QuoteFormComponent implements OnInit {
- newQuote= new Quotes(0,"", "",0, 0, "", new Date());
- @Output() addQuote = new EventEmitter<Quotes>();
+ newQuote= new Quote(0,"", "",0, 0,"", new Date());
+ @Output() addQuote = new EventEmitter<Quote>();
 
   submitQuote(form:NgForm , data:any){
 
