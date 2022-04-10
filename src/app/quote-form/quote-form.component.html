@@ -1,1 +1,49 @@
-<p>quote-form works!</p>
+<p>
+    <a class="btn generate btn-primary " data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+      Generate Quote
+    </a>
+
+</p>
+<div class="collapse" id="collapseExample">
+    <div class="card card-body">
+        <div class="container-fluid">
+            <h2 class="text-center">Create a new <span>Quote</span></h2>
+
+            <form (ngSubmit)='submitQuote( quoteForm, quoteForm.value)' #quoteForm='ngForm'>
+                <div class="form-group">
+
+                    <label for="quote">Quote</label>
+                    <textarea class="form-control" id="quote" rows="4" ngModel name="quote" #quote="ngModel" required></textarea>
+                    <div *ngIf="quote.invalid && (quote.dirty || quote.touched)" class="alert alert-danger">
+
+                        <div *ngIf="quote.errors?.['required']">
+                            quote is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <label for="author">Author</label>
+                    <input type="text" class="form-control" id="author" ngModel name="author" #name='ngModel' required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="name">Your name</label>
+                    <input type='text' class="form-control" id="name" ngModel name="submission" #submission="ngModel" required>
+                    <div *ngIf="submission.invalid && (submission.dirty || submission.touched)" class="alert alert-danger">
+
+                        <div *ngIf="submission.errors?.['required']">
+                            your name is required.
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-success">Add Quote</button>
+            </form>
+        </div>
+
+
+    </div>
+</div>
