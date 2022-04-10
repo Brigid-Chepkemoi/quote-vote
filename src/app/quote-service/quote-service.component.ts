@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { quotes } from '../quoteList';
+import { Quotes } from '../quotes';
 
-@Component({
-  selector: 'app-quote-service',
-  templateUrl: './quote-service.component.html',
-  styleUrls: ['./quote-service.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class QuoteServiceComponent implements OnInit {
-
+export class QuoteService {
+getQuotes(){
+return quotes
+}
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
