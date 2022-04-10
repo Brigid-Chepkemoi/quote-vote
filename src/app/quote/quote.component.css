@@ -1,0 +1,54 @@
+h1 {
+    font-family: 'Yellowtail', cursive;
+    color: #feb83f;
+}
+
+h2 {
+    display: flex;
+    float: right;
+    color: #feb83f;
+    font-size: 8rem;
+}
+
+em {
+    font-size: 3rem;
+    color: #feb83f;
+}
+
+.fas {
+    color: #5450ae;
+}
+
+button {
+    background: #feb83f;
+}
+
+h3 {
+    color: #5450ae;
+}
+
+h5 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+span {
+    color: #5450ae;
+}
+
+.quotes {
+    margin-top: 4rem;
+}
+
+.card-body {
+    border-right: 8px solid #feb83f;
+}
+
+.card-body:hover {
+    box-shadow: 8px 5px 5px 5px;
+}
+
+.vote {
+    display: flex;
+    justify-content: space-evenly;
+}
