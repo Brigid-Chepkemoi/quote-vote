@@ -1,6 +1,6 @@
 # Quotes App
 
-![Project Image](src/assets/quotesapp.png)
+![Quote App Image](src/assets/quotesapp.png)
 
 ### By: Brigid Chepkemoi
 
