@@ -1,4 +1,4 @@
-import { Quotes } from './quote-class/quote-class.component';
+import { Quotes } from './quotes';
 export let quotes: Quotes[] = [
     new Quotes(1, "When you have a dream, you’ve got to grab it and never let go","Carol Burnest", 20 ,8,"Tracy Sareto",new Date(2022,  6, 6)),
     new Quotes(2, "You make a choice: continue living your life feeling muddled in this abyss of self-misunderstanding, or you find your identity independent of it. You draw your own box", "Duchess Megan",25, 6,"Tracy Sareto",new Date(2022,  6, 6, 12, 49, 10)),

@@ -1,5 +1,5 @@
 import { Component,  Input, OnInit,  } from '@angular/core';
-import { Quotes } from '../quote-class/quote-class.component';
+import { Quote } from '../quote-class/quote-class.component';
 import { quotes } from '../quote-list';
 import { QuoteServiceComponent} from '../quote-service/quote-service.component';
 import { AlertServiceComponent } from '../alert-service/alert-service.component';
@@ -14,7 +14,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class QuoteComponent implements OnInit {
  
-  addNewQuote(quotes: Quotes){
+  addNewQuote(quotes: Quote){
     let quotesLength = this.quotes.length;
     quotes.id = quotesLength+1;
     this.quotes.push(quotes)
@@ -48,11 +48,11 @@ downVote(){
 }
 
 
-quotes:Quotes[];
+quotes:Quote[];
 alertService:AlertServiceComponent;
 
 constructor(quoteservice:QuoteServiceComponent, alertService:AlertServiceComponent, private http:HttpClient) {
-  this.quotes = quoteservice.getQuotes()
+  this.quote = quoteservice.getQuotes()
   this.alertService = alertService;
 
 }
@@ -66,10 +66,10 @@ constructor(quoteservice:QuoteServiceComponent, alertService:AlertServiceCompone
 
     this.http.get<ApiResponse>("http://quoets.stormconsultancy.co.uk/random.json").subscribe(data=>{
       // Succesful API request
-      this.quote = new Quotes(data.writter, data.quotess,)
+      this.quote = new Quote(data.writter, data.quotess,)
     }
     ,err=>{
-        this.quote = new Quotes("Winston Churchill","Never never give up!")
+        this.quote = new Quote("Winston Churchill","Never never give up!")
         console.log("An error occurred")
     })
   }

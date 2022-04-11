@@ -7,7 +7,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteServiceComponent } from './quote-service/quote-service.component';
-import { Quotes } from './quote-class/quote-class.component';
+import { Quotes } from './quotes';
 import { DatePipe } from './date.pipe';
 import { AlertServiceComponent } from './alert-service/alert-service.component';
 
