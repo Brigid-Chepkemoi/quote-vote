@@ -1,6 +1,6 @@
 import { Component,  Input, OnInit,  } from '@angular/core';
 
-import { QuoteServiceComponent} from '../quote-service/quote-service.component';
+
 import { HttpClient } from '@angular/common/http';
 import { Quotes } from '../quotes';
 
@@ -13,9 +13,9 @@ import { Quotes } from '../quotes';
 })
 export class QuoteComponent implements OnInit {
    quotes: Quotes[] = [
-    new Quotes(1, "When you have a dream, you’ve got to grab it and never let go","Carol Burnest", 16 ,2,"Brigid Chepkemoi",new Date(2022,  6, 6)),
-    new Quotes(2, "“In a gentle way, you can shake the world.”", "Mahatma Gandhi",24, 6,"Brigid Chepkemoi",new Date(2022,  6, 6, 12, 49, 10)),
-    new Quotes(3, "If life were predictable it would cease to be life, and be without flavor. ", "Eleanor Roosevelt",30,4,"Brigid Chepkemoi",new Date(2022,  6, 6, 12, 49, 10))
+    new Quotes(1, "When you have a dream, you’ve got to grab it and never let go","Carol Burnest", 16 ,2,"Brigid Chepkemoi",new Date(2022,  4, 10)),
+    new Quotes(2, "“In a gentle way, you can shake the world.”", "Mahatma Gandhi",24, 6,"Brigid Chepkemoi",new Date(2022,  8, 1, 12, 49, 10)),
+    new Quotes(3, "If life were predictable it would cease to be life, and be without flavor. ", "Eleanor Roosevelt",30,4,"Brigid Chepkemoi",new Date(2022,  7, 2, 12, 49, 10))
    ];
   addNewQuote(quote){
     let quotesLength=this.quotes.length+1;
