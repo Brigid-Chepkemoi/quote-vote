@@ -22,7 +22,6 @@ export class QuoteFormComponent implements OnInit {
       alert("Enter name and quote please");
     }
     form.reset()
-// this.addQuote.emit(this.newQuote);
   }
   
   constructor() { }

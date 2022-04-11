@@ -7,7 +7,6 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quote-detail.component.css']
 })
 export class QuoteDetailComponent implements OnInit {
-  //input binding
   @Input() quote:Quotes;
   @Output() isDeleted=new EventEmitter<boolean>();
 

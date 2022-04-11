@@ -1,27 +1,18 @@
 <div class="container">
     <h2>"<span>"</span></h2>
-    <!-- <ng-progress></ng-progress> -->
+    
     <h1>Quotes </h1>
   
-    <h5>These famous life sayings and quotes about life 🕊️will inspire positivity and good, happy feelings😃.<br> Enjoy some inspirational quotes and generate your quote.</h5>
-    <!-- <div class="row">
-        <div class="blockquote text-center">
-            <p>{{quote.author}}</p>
-            <blockquote class="blockquote-footer"><span>{{quote.submission}}</span>
-            </blockquote>
-        </div>
-    </div> -->
+    <h5> Quotes about life 🕊️ that will inspire positivity and happy feelings😃 while making the world a better place<br>Please make impact by uploading your quote.</h5>
+
     <div class="row"  >
         <div class="container" style=" display: flex;">
         <div class="quotes col-md-4 " *ngFor='let quote of quotes;let i = index'>
             <div *ngIf="quote.likes == highest; then popular else other"></div>
             <div class="card" style="width: 20rem; height: 23rem; ">
                 <div class="card-body">
-                    <!-- to register the index of each quote item in the quotes list. -->
                     <div>
-
                         <h3>quote</h3>
-
                         <p > <em>"</em>{{quote.quote}}<br><em>"</em></p>
                     </div>
                     <div class="vote">
@@ -30,11 +21,7 @@
                         <button (click)='upVote()'><i class="fas fa-thumbs-up"></i><span>{{likes}}</span></button>
                         <button (click)='downVote()'><i class="fas fa-thumbs-down"></i><span>{{dislikes}}</span></button>
                     </div>
-                    
-                    
                     <div *ngIf="quote.showauthor">
-                    <!--shows and hide authors description-->
-                    <!-- <app-quote-detail *ngIf='quote.showauthor' [quote]='quote' (remove)='deleteQuote($event,i)'></app-quote-detail> -->
                     <app-quote-detail [quote] = 'quote' (isDeleted)='deleteQuote($event,i)'></app-quote-detail>
                 </div>
             </div>
@@ -42,7 +29,7 @@
             </div>
 
         </div>
-    <!-- </li> -->
+    
     </div>
 </div>
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
