@@ -18,9 +18,12 @@ export class QuoteComponent implements OnInit {
     new Quotes(3, "I just want you to know that if you are out there and you are being really hard on yourself right now for something that has happened it’s normal. That is what is going to happen to you in life. No one gets through unscathed. We are all going to have a few scratches on us. Please be kind to yourselves and stand up for yourself, please.", "Taylor Swift",30,4,"Tracy Sareto",new Date(2022,  6, 6, 12, 49, 10))
    ];
   addNewQuote(quote){
-    let quotesLength = this.quote.length;
-    quote.id = quotesLength+1;
-    this.quotes.push(quote)
+    let quotesLength=this.quotes.length+1;
+    let quoteObj=new Quotes(quotesLength,quote.quote,quote.author,0,0,quote.submission,new Date());
+    this.quotes.push(quoteObj);
+    // let quotesLength = this.quote.length;
+    // quote.id = quotesLength+1;
+    // this.quotes.push(quote)
   }
   
   //toogle details

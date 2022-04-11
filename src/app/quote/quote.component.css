@@ -38,6 +38,7 @@ span {
 
 .quotes {
     margin-top: 4rem;
+    display: flex;
 }
 
 .card-body {
