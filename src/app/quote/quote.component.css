@@ -1,18 +1,18 @@
 h1 {
     font-family: 'Yellowtail', cursive;
-    color: #feb83f;
+    color: rgb(120, 209, 205);
 }
 
 h2 {
     display: flex;
     float: right;
-    color: #feb83f;
+    color: rgb(120, 209, 205);
     font-size: 8rem;
 }
 
 em {
     font-size: 3rem;
-    color: #feb83f;
+    color: rgb(120, 209, 205);
 }
 
 .fas {
@@ -20,7 +20,7 @@ em {
 }
 
 button {
-    background: #feb83f;
+    background: rgb(120, 209, 205);
 }
 
 h3 {
@@ -39,10 +39,12 @@ span {
 .quotes {
     margin-top: 4rem;
     display: flex;
+    justify-content: space-evenly;
 }
 
 .card-body {
-    border-right: 8px solid #feb83f;
+    border-right: 8px solid rgb(120, 209, 205);
+
 }
 
 .card-body:hover {
@@ -52,4 +54,8 @@ span {
 .vote {
     display: flex;
     justify-content: space-evenly;
+}
+.row{
+    display: flex;
+    flex-direction: row;
 }
