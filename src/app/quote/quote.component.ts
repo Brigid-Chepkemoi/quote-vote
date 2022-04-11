@@ -64,7 +64,7 @@ downVote(){
 //   this.alertService = alertService;
 
 // }
-constructor(){}
+
 
 ngOnInit(): void {}
 }
