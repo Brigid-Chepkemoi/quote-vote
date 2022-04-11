@@ -9,41 +9,60 @@
         <div class="container-fluid">
             <h2 class="text-center">Create a new <span>Quote</span></h2>
 
-            <form (ngSubmit)='submitQuote( quoteForm, quoteForm.value)' #quoteForm='ngForm'>
+            <form (ngSubmit)='submitQuote(form, form.value)' #form='ngForm'>
+                <div class="form-group">
+                    <label for="quote">Quote</label>
+                    <textarea class="form-control" id="quote" rows="4" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" placeholder="Please enter a quote" required></textarea>
+                    <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                      <p>Please enter a quote</p>
+                    </div>
+                    <!-- <label for="quote">Quote</label>
+                    <textarea class="form-control" id="quote" rows="4" ngModel name="quote" #quote="ngModel" required></textarea>
+                    <div *ngIf="(quote.invalid && (quote.dirty || quote.touched))" class="alert alert-danger">
+
+                        <div *ngIf="(quote.errors?.('required'))">
+                            quote is required.
+                        </div> -->
+                    </div>
+                
                 <div class="form-group">
 
-                    <label for="quote">Quote</label>
-                    <textarea class="form-control" id="quote" rows="4" ngModel name="quote" #quote="ngModel" required></textarea>
-                    <div *ngIf="quote.invalid && (quote.dirty || quote.touched)" class="alert alert-danger">
-
-                        <div *ngIf="quote.errors?.['required']">
-                            quote is required.
-                        </div>
+                    <label for="author">Author</label>
+                    <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' placeholder="Please enter author's name" required>
+                    <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                      <p>Please enter author's name</p>
                     </div>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
 
                     <label for="author">Author</label>
                     <input type="text" class="form-control" id="author" ngModel name="author" #name='ngModel' required>
 
-                </div>
-
+                </div> -->
                 <div class="form-group">
+
+                    <label for="submission">Name</label>
+                    <input type="text" class="form-control" id="submission" [(ngModel)]="newQuote.submission" name="submission" #submission='ngModel' placeholder="Please enter your name" required>
+                    <div [hidden]="submission.valid || submission.pristine" class="alert alert-danger">
+                      <p>Please enter your name</p>
+                    </div>
+                </div>
+                <!-- <div class="form-group">
 
                     <label for="name">Your name</label>
                     <input type='text' class="form-control" id="name" ngModel name="submission" #submission="ngModel" required>
-                    <div *ngIf="submission.invalid && (submission.dirty || submission.touched)" class="alert alert-danger">
+                    <div *ngIf="(submission.invalid && (submission.dirty || submission.touched))" class="alert alert-danger">
 
-                        <div *ngIf="submission.errors?.['required']">
+                        <div *ngIf="(submission.errors?.('required'))">
                             your name is required.
                         </div>
                     </div>
-                </div>
-
-                <button type="submit" class="btn btn-success">Add Quote</button>
+                </div> -->
+                <button type="submit" class="btn btn-success" [disabled]="!form.valid">Add Quote</button>
+                <!-- <button type="submit" class="btn btn-success">Add Quote</button> -->
             </form>
         </div>
 
-
     </div>
-</div>
+    </div>
+

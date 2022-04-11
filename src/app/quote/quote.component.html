@@ -1,18 +1,19 @@
 <div class="container">
     <h2>"<span>"</span></h2>
-    <ng-progress></ng-progress>
+    <!-- <ng-progress></ng-progress> -->
     <h1>Quotes <span>Inspo</span></h1>
     <div class="random">
     </div>
     <h5>These famous life sayings and quotes about life 🕊️will inspire positivity and good, happy feelings😃.<br> Enjoy some inspirational quotes and generate your quote.</h5>
-    <div class="row">
+    <!-- <div class="row">
         <div class="blockquote text-center">
-            <p>{{quote.quotess}}</p>
-            <blockquote class="blockquote-footer"><span>{{quote.writter}}</span>
+            <p>{{quote.author}}</p>
+            <blockquote class="blockquote-footer"><span>{{quote.submission}}</span>
             </blockquote>
         </div>
-    </div>
-    <ul class="row">
+    </div> -->
+    <ul class="row" >
+        <li>
         <div class="quotes col-md-4 " *ngFor='let quote of quotes;let i = index'>
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
@@ -32,20 +33,14 @@
 
 
                     <!--shows and hide authors description-->
-                    <app-quotee-detail *ngIf='quote.showauthor' [quote]='quote' (remove)='deleteQuote($event,i)'></app-quotee-detail>
+                    <app-quote-detail *ngIf='quote.showauthor' [quote]='quote' (remove)='deleteQuote($event,i)'></app-quote-detail>
                 </div>
 
 
             </div>
 
-
-
-
-
-
-
         </div>
-
+    </li>
     </ul>
 
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>

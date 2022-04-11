@@ -1,10 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Quotes } from './quotes';
 
 @Pipe({
-  name: 'date'
+  name: 'timecount'
 })
-export class DatePipe implements PipeTransform {
+export class TimecountPipe implements PipeTransform {
 
   transform(value: any) {
     var lastSeen: string = "";

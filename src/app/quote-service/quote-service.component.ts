@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { quotes } from '../quote-list';
+// import { quotes } from '../quote-list';
 import { Quotes } from '../quotes';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { Quotes } from '../quotes';
 })
 export class QuoteServiceComponent {
 getQuotes(){
-return quotes
+// return quotes
 }
   constructor() { }
 }

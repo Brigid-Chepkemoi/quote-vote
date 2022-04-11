@@ -1,30 +1,35 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
-import { QuoteServiceComponent } from './quote-service/quote-service.component';
-import { Quotes } from './quotes';
-import { DatePipe } from './date.pipe';
-import { AlertServiceComponent } from './alert-service/alert-service.component';
-
+import { FormsModule } from '@angular/forms';
+import { TimecountPipe } from './timecount.pipe';
+// import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+// import { NgProgressModule } from '@ngx-progressbar/core';
+// 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
     QuoteDetailComponent,
     QuoteFormComponent,
-    QuoteServiceComponent,
-    Quotes,
-    DatePipe,
-    AlertServiceComponent
+  
+    TimecountPipe,
+  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    // NgProgressModule,
+    // NgProgressHttpClientModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
