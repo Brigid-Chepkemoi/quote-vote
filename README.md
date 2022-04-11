@@ -8,7 +8,7 @@
 
 ## Description
 
-This is an Angular project application that users can generate quotes, upload quotes, vote and downvote quotes to their liing. They can also delete quotes
+This is an Angular project application that users can generate quotes, upload quotes, vote and downvote quotes to their liking. They can also delete quotes
 
 ## Live Link
 
