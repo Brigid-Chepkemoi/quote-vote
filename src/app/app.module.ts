@@ -9,6 +9,7 @@ import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { FormsModule } from '@angular/forms';
 import { TimecountPipe } from './timecount.pipe';
+import { HighlightDirective } from './highlight.directive';
 // import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 // import { NgProgressModule } from '@ngx-progressbar/core';
 // 
@@ -20,6 +21,8 @@ import { TimecountPipe } from './timecount.pipe';
     QuoteFormComponent,
   
     TimecountPipe,
+  
+    HighlightDirective,
   
   ],
   imports: [

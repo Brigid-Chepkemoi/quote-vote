@@ -8,15 +8,13 @@ import { Quotes } from '../quotes';
 })
 export class QuoteDetailComponent implements OnInit {
   //input binding
-@Input() quote:Quotes;
-// @Input() post:any;
+  @Input() quote:Quotes;
+  @Output() isDeleted=new EventEmitter<boolean>();
 
-@Output() isDeleted=new EventEmitter<boolean>();
+  quoteDelete(remove:boolean){
+    this.isDeleted.emit(remove);
+  }
 
-quoteDelete(remove:boolean){
-  this.isDeleted.emit(remove);
-}
-  
   constructor() { }
 
   ngOnInit(): void {
